@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<title>DZ_Lesson 8</title>
+	</head>
+	<body>
+		<main class="main">
+
+
+
+			<h1 class="main__title">Урок №8</h1>
+
+
+			<p class="main__text">
+				Синтаксис, то есть правило записи псевдоклассов прост, мы пишем селектор класса либо селектор типа
+				ставим двоеточие, пишем тот или иной псевдосласс и уже после этого открываем фигурные
+				скобки и пишем нужные CSS параметры:
+				Селектор:Псевдокласс { параметры стиля }
+			</p>
+
+			<h2 class="subtitle">Рассмотрим псевдоклассы состояния.</h2>
+
+
+			<a href="" class="link__hover">(Наведи на меня)</a>
+
+			<p>
+				<span class="special">:hover</span>
+				Срабатывает при наведении на элемент, часто применяется как для ссылок так и для любого другого элемента.
+			</p>
+				<p class="opacity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nemo asperiores, eum ipsa provident adipisci dolores rem repellat corrupti sit modi ad veniam iure itaque, iste doloribus, nobis natus dicta!
+
+			<p>
+				<span class="special">:active</span>
+				Срабатывает при нажатии на элемент. В основном применяется к ссылкам и кнопкам.
+				<a href="" class="link__active">(Нажми меня)</a>
+			</p>
+
+			<p>
+				<span class="special">:visited</span>
+				Срабатывает для посещенных ссылок
+			</p>
+			<p class="navigation">
+				<a id="1" class="button1" href="#1">Cсылка 1</a>
+				<a id="2" class="button2" href="#2">Cсылка 2</a>
+				<a id="3" class="button3" href="#3">Cсылка 3</a>
+			</p>
+			<p>
+				<span class="special">:focus</span>
+				Срабатывает при получении элементом фокуса. Часто применяется к елементам форм. Например инпутам.
+				<a href="" class="link__none"></a>
+			</p>
+			<p class="focuses">
+
+				<a id="4" class="link" href="#4">Cсылка 1</a>
+				<a id="5" class="link" href="#5">Cсылка 2</a>
+				<a id="6" class="link" href="#6">Cсылка 3</a>
+			</p>
+			<p>
+				<span class="special">:target</span>
+				Срабатывает когда элемент является объектом
+				на который ссылаются. <mark>Это обязательно должна быть ссылка!</mark>
+			</p>
+			<a href="#text" id="open" class="open">Я открываю</a>
+			<div id="text" class="text">
+
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, tempora eum vel et nobis ad aspernatur alias quaerat illum ipsum ipsa explicabo minus laborum aperiam minima vitae exercitationem veritatis porro.
+				<a href="#open" class="close">Закрыть</a>
+
+			</div>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magni nobis quod consequuntur id minus, delectus aliquam sint explicabo nihil quae vero, expedita eligendi eum mollitia at est iure porro.
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et harum cum vitae non delectus, pariatur officiis consequuntur fuga corporis magni excepturi sequi itaque qui. Debitis laboriosam nisi repellat voluptatum provident?
+			</p>
+
+			<div class="text2">
+
+				<h2 class="subtitle">Псевдоклассы положения в коде .</h2>
+
+				<p>
+					Обращение к первому элементу в блоке
+					<span class="special">:first-child</span>
+
+
+					Любой тег первый в блоке
+
+					<span class="special">.text2 *:first-child {
+						background-color: red;
+						} </span>
+
+					Первый в блоке тег P, если выше него ничего нет
+
+					<span class="special">.text2 p:first-child {
+						background-color: red;
+						}</span>
+
+					Первый в блоке тег P, даже если выше него есть другие теги
+
+					<span class="special">.text2 p:first-of-type {
+						background-color: red;
+						}</span>
+
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, expedita vel perspiciatis inventore officiis velit reiciendis ea eligendi reprehenderit aperiam consequuntur, itaque dicta magni tenetur voluptatum rerum provident quo est.
+				</p>
+
+				<p>
+
+					<span class="special">:nth-child(порядковый номер элемента) </span>
+
+					Обращение к конкретным элементам в блоке 4
+
+					<span class="special">.text p:nth-child(4) {
+						background-color: red;
+						} </span>
+
+					Обращение к конкретным элементам в блоке 3
+					<span class="special">.text p:nth-of-type(3) {
+						background-color: red;}</span>
+
+					Обращение к конкретным элементам в блоке (Четные порядковые элементы)
+					<span class="special">.text p:nth-of-type(odd) {
+						background-color: red;
+					</span>
+					}
+					Обращение к конкретным элементам в блоке (Нечетные порядковые элементы)
+
+					<span class="special">text p:nth-of-type(even) {
+						background-color: red;}</span>
+
+				</p>
+
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatibus assumenda facilis eius veniam, magni saepe nemo fuga? Vel unde modi optio magni? Molestias, iure praesentium facilis reprehenderit porro sunt!
+				</p>
+				<p>
+					Обращение к последнему элементу в блоке
+					<span class="special">:last-child</span>
+					Любой последнему тег в блоке
+					<span class="special">.text2 *:last-child {
+						background-color: red;}</span>
+
+					Последний в блоке тег P, если ниже него ничего нет
+					<span class="special">.text p:last-child {background-color: red;}</span>
+
+					Последний в блоке тег P, даже если ниже него есть другие теги
+
+					<span class="special">.text p:last-of-type {
+						background-color: red; }</span>
+				</p>
+
+
+			</div>
+
+			<h2>Псевдоэлементы</h2>
+			<p>
+				Псевдоэлементы – это селекторы, которые определяют область элементов, которая изначально
+				отсутствует в дереве документа. Эта область создается искусственно с помощью CSS.</p>
+			<div class="text3">
+				<p>
+					Псевдоэлемент <span class="special">:first-line</span> задает стиль первой строки форматированного текста.
+					Длина этой строки зависит от многих факторов, таких как используемый шрифт,
+					размер окна браузера, ширина блока, языка и т.д. В правилах стиля допустимо
+					использовать только свойства, относящиеся к шрифту, изменению цвета текста и фона.
+				</p>
+			</div>
+			<div class="text4">
+				<p>
+					Псевдоэлемент <span class="special">:first-letter</span> определяет стиль первого символа в тексте элемента,
+					к которому добавляется.
+					К этому псевдоэлементу могут применяться только стилевые свойства,
+					связанные со свойствами шрифта, полями, отступами, границами, цветом и фоном.
+				</p>
+
+			</div>
+
+
+			<p>Псевдоэлемент <span class="special">:before</span> применяется для отображения желаемого контента до содержимого элемента,
+				к которому он добавляется. Работает совместно со свойством <mark>content</mark>.
+
+				При добавлении :before к блочному элементу, значение свойства display может быть только: block, inline, none, list-item.
+				Все остальные значения будут трактоваться как block.
+				При добавлении :before к встроенному элементу, display ограничен значениями inline и none.
+				<mark>Все остальные будут восприниматься как inline.</mark></p>
+			<div class="text5">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis blanditiis, commodi rerum tempore recusandae tenetur, atque vero, aut corrupti suscipit non sunt laudantium. Voluptatum molestias perferendis quia sunt dolore facilis.
+			</div>
+
+
+			<p>Псевдоэлемент, который используется для вывода желаемого текста после содержимого элемента,
+				к которому он добавляется. Псевдоэлемент <span class="special">:after</span> работает совместно со свойством <mark>content</mark>.
+
+				При добавлении :after к блочному элементу, значение свойства display может быть только:
+				block, inline, none, list-item. Все остальные значения будут трактоваться как block.
+				При добавлении :after к встроенному элементу, display ограничен значениями inline и none.
+				<mark>Все остальные будут восприниматься как inline.</mark></p>
+
+			<div class="text6">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis blanditiis, commodi rerum tempore recusandae tenetur, atque vero, aut corrupti suscipit non sunt laudantium. Voluptatum molestias perferendis quia sunt dolore facilis.
+			</div>
+
+
+
+			<ul class="list">
+				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti odio voluptates laborum saepe necessitatibus assumenda odit obcaecati excepturi natus reiciendis eligendi beatae libero eum, asperiores voluptatibus incidunt, cumque accusantium!</li>
+				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti odio voluptates laborum saepe necessitatibus assumenda odit obcaecati excepturi natus reiciendis eligendi beatae libero eum, asperiores voluptatibus incidunt, cumque accusantium!</li>
+				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti odio voluptates laborum saepe necessitatibus assumenda odit obcaecati excepturi natus reiciendis eligendi beatae libero eum, asperiores voluptatibus incidunt, cumque accusantium!</li>
+				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti odio voluptates laborum saepe necessitatibus assumenda odit obcaecati excepturi natus reiciendis eligendi beatae libero eum, asperiores voluptatibus incidunt, cumque accusantium!</li>
+				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti odio voluptates laborum saepe necessitatibus assumenda odit obcaecati excepturi natus reiciendis eligendi beatae libero eum, asperiores voluptatibus incidunt, cumque accusantium!</li>
+			</ul>
+
+			<h2>Поймай меня</h2>
+
+
+			<div class="image">
+				<span class="img1">
+					<img src="img/kisspng-nefertiti100.png" alt="">
+				</span>
+
+				<span class="img2">
+					<img src="img/kisspng-nefertiti100.png" alt="">
+				</span>
+
+			</div>
+
+		</main>
+
+
+
+
+	</body>
+</html>

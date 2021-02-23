@@ -1,0 +1,427 @@
+/*-------------------Подключаєм шрифты---------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lora:regular,700&display=swap");
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-LightItalic.woff2") format("woff2"), url("../fonts/Gilroy-LightItalic.woff") format("woff");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Стили обнуления */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+body {
+	line-height: 1;
+	color: rgb(48, 48, 48);
+	padding: 26px;
+	background: url("../img/fon.jpg") 0 0 repeat fixed;
+}
+/* ------------------ */
+.main {
+	max-width: 1000px;
+	margin: 0px auto;
+	background: url("../img/ppirus-textura.jpg") 0 0 repeat;
+	height: 100%;
+	padding: 50px;
+	font-family: "Lora", Helvetica, sans-serif;
+	font-size: 24px;
+	text-align: justify;
+	line-height: 30px;
+}
+h1 {
+	font-family: Gilroy, Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 32px;
+	text-align: center;
+	padding: 30px 30px 0px 30px;
+	width: 200px;
+	margin: 0px auto;
+}
+
+h2 {
+	font-family: Gilroy, Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+	font-style: italic;
+	text-align: center;
+	padding: 30px 30px 30px 30px;
+	max-width: 1000px;
+	margin: 0px auto;
+}
+
+p {
+	text-indent: 50px;
+	padding: 10px;
+	margin: 10px;
+}
+.special {
+	font-style: italic;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+/* Псевдоклассы */
+
+/* Псевдоклассы состояния */
+
+.link__hover {
+	color: #00b14a;
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+}
+
+.opacity {
+	opacity: 0;
+}
+
+/* /*
+:hover
+Срабатывает при наведении на элемент, 
+часто применяется применяется как для ссылок так
+и для любого другого элемента. */
+
+.link__hover:hover {
+	color: yellow;
+	background: #643a79;
+	border-radius: 10px;
+}
+
+.link__hover:hover + p {
+	color: rgb(255, 208, 0);
+	background: #3a5079;
+	border-radius: 5px;
+}
+
+.link__hover:hover + p + p {
+	color: rgb(36, 36, 36);
+	background: #f0ff1b;
+	border-radius: 5px;
+	opacity: 1;
+}
+
+/* :active
+Срабатывает при нажатии на элемент. 
+В основном применяется к ссылкам и кнопкам. */
+
+.link__active {
+	color: #fff;
+	background-color: rgb(252, 54, 54);
+	border-radius: 10px;
+}
+
+.link__active:active {
+	background: #643a79;
+	border-radius: 10px;
+}
+
+/*
+:visited
+Срабатывает для посещенных ссылок */
+
+.navigation {
+	display: inline-block;
+	text-align: left;
+	padding: 25px;
+}
+
+.navigation a {
+	font-family: "Kelly Slab", Helvetica, sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 180px;
+
+	line-height: 18px;
+	padding: 15px 0px;
+	border-radius: 15px;
+}
+
+.button1 {
+	background-color: rgba(147, 151, 87, 0.671);
+	color: rgb(223, 222, 222);
+}
+
+.button1:visited {
+	color: rgb(255, 0, 0);
+	background-color: rgba(235, 252, 3, 0.671);
+}
+
+.button2 {
+	border: 3px solid black;
+}
+
+.button2:visited {
+	border: 2px solid red;
+}
+
+.button3 {
+	color: rgb(223, 222, 222);
+	border: 3px solid black;
+}
+
+.button3:visited {
+	color: rgb(55, 0, 255);
+
+	border: 1px dotted rgb(252, 248, 3);
+	background-color: rgb(255, 90, 90);
+}
+
+/* :focus
+Срабатывает при получении элементом фокуса. 
+Часто применяется к елементам форм. Например инпутам. */
+
+.focuses a {
+	font-family: "Kelly Slab", Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 180px;
+	line-height: 18px;
+	padding: 15px 0px;
+	border-radius: 15px;
+}
+
+.link:focus {
+	outline: 1px dotted red;
+	color: red;
+	text-decoration: line-through;
+}
+
+/*
+:target
+Срабатывает когда элемент является объектом 
+на который ссылаются
+*/
+.open {
+	color: rgb(87, 163, 0);
+	display: inline-block;
+	margin: 0px 0px 10px 0px;
+}
+.text {
+	background-color: rgb(233, 135, 135);
+	padding: 5px;
+	display: none;
+}
+
+.text:hover {
+	background-color: rgb(137, 157, 202);
+}
+
+.text:target {
+	display: block;
+}
+/* ===================================== */
+
+/* Псевдоклассы положения в коде */
+
+.text2 p {
+	text-indent: 0px;
+	font-style: italic;
+	font-size: 20px;
+	text-align: left;
+	max-width: 1000px;
+	margin: 0px 0px 25px 0px;
+	background-color: rgb(141, 221, 141);
+	padding: 15px;
+}
+
+/*
+:first-child
+Обращение к первому элементу в блоке
+*/
+
+/* Любой тег первый в блоке */
+
+/* .text2 *:first-child {
+	background-color: red;
+} */
+
+/* Первый в блоке тег P, если выше него ничего нет  */
+
+/* .text2 p:first-child {
+	background-color: red;
+} */
+
+/* Первый в блоке тег P, даже если выше него есть другие теги */
+
+.text2 p:first-of-type {
+	background-color: rgb(226, 138, 138);
+}
+
+/*
+:last-child
+Обращение к последнему элементу в блоке
+*/
+
+/* Любой последнему тег в блоке */
+/* 
+.text2 *:last-child {
+	background-color: rgb(226, 138, 138);
+} */
+
+/* Последний в блоке тег P, если ниже него ничего нет  */
+
+.text2 p:last-child {
+	background-color: rgb(226, 138, 138);
+}
+
+/* Последний в блоке тег P, даже если ниже него есть другие теги */
+/*
+.text p:last-of-type {
+	background-color: red;
+}
+*/
+
+/*
+:nth-child(порядковый номер элемента)
+Обращение к конкретным элементам в блоке
+*/
+/* 
+.text p:nth-child(4) {
+	background-color: red;
+} */
+
+.text2 p:nth-of-type(3) {
+	background-color: rgb(110, 139, 218);
+}
+
+/* Четные */
+/* .text2 p:nth-of-type(odd) {
+	background-color: rgb(110, 139, 218);
+} */
+/* Нечтные */
+/* .text2 p:nth-of-type(even) {
+	background-color: rgb(110, 139, 218);
+} */
+
+/*===============================================*/
+
+/* Псевдоэлементы */
+
+/*
+Псевдоэлемент :first-line задает стиль первой строки форматированного текста. 
+Длина этой строки зависит от многих факторов, таких как используемый шрифт, 
+размер окна браузера, ширина блока, языка и т.д. В правилах стиля допустимо 
+использовать только свойства, относящиеся к шрифту, изменению цвета текста и фона.
+*/
+
+.text3 p::first-line {
+	background-color: red;
+}
+
+/*
+Псевдоэлемент :first-letter определяет стиль первого символа в тексте элемента, 
+к которому добавляется. 
+К этому псевдоэлементу могут применяться только стилевые свойства, 
+связанные со свойствами шрифта, полями, отступами, границами, цветом и фоном.
+*/
+
+.text4 p::first-letter {
+	background-color: rgb(0, 81, 255);
+}
+
+.text5 {
+}
+
+.text5::before {
+	content: "";
+	width: 25px;
+	height: 19px;
+	display: inline-block;
+	background: url("../img/check.png") 0 0 no-repeat;
+}
+.text6::after {
+	content: "";
+	width: 25px;
+	height: 19px;
+	display: inline-block;
+	background: url("../img/check.png") 0 0 no-repeat;
+}
+
+.list {
+}
+.list li {
+	padding: 0px 0px 0px 30px;
+	margin: 0px 0px 20px 0px;
+	line-height: 19px;
+}
+
+.list li::before {
+	content: "";
+	vertical-align: top;
+	margin: 0px 11px 0px -30px;
+	background: rgb(0, 26, 255);
+	width: 19px;
+	height: 19px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.list li:hover::before {
+	border-radius: 0%;
+}
+
+/* ----------Поймай меня----------- */
+img {
+	max-width: 100%;
+	display: inline-block;
+	padding: 0px 50px 0px 80px;
+	margin: 20px;
+}
+
+.img2 {
+	opacity: 0;
+}
+
+.img1:hover {
+	opacity: 0;
+}
+.img1:hover + .img2 {
+	opacity: 1;
+}
